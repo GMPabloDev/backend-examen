@@ -301,6 +301,9 @@ listingsRoutes.post("/", async (c) => {
     .from(listingImages)
     .where(eq(listingImages.listingId, listing.id));
 
+  console.log({ images });
+  console.log({ listing });
+
   return c.json(
     {
       message: "Anuncio creado exitosamente",
